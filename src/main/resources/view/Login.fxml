@@ -45,10 +45,18 @@
             <Glow level="0.35" />
          </effect>
       </Button>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="218.0" layoutY="60.0" prefHeight="63.0" prefWidth="320.0" text="Trends" textFill="WHITE">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="218.0" layoutY="24.0" prefHeight="63.0" prefWidth="320.0" text="Trends" textFill="WHITE">
          <font>
             <Font name="SimSun" size="49.0" />
          </font>
       </Label>
+      <Button fx:id="btnBack" focusTraversable="false" layoutX="22.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnBackOnAction" opacity="0.8" prefHeight="31.0" prefWidth="113.0" stylesheets="@../css/Hover.css" text="Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.35" />
+         </effect>
+      </Button>
    </children>
 </AnchorPane>

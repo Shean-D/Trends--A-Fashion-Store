@@ -1,0 +1,37 @@
+/* General styling for TextField */
+.text-field {
+    -fx-font-size: 14px;              /* Set font size */
+    -fx-font-family: "Arial";         /* Set font family */
+    -fx-background-color: #3F4F44;    /* Set background color */
+    -fx-border-color: #3498db;       /* Set border color */
+    -fx-border-width: 2px;           /* Set border width */
+    -fx-border-radius: 5px;          /* Set border radius */
+    -fx-padding: 10px;               /* Set padding inside the text field */
+    -fx-text-fill: #FDFAF6;          /* Set text color */
+    -fx-focus-color: #4CAF50;        /* Set focus color (green when selected) */
+}
+
+/* Styling when TextField is focused (clicked or selected) */
+.text-field:focused {
+    -fx-border-color: #3498db;       /* Green border when focused */
+    -fx-background-color: Black;
+    -fx-text-fill: White;           /* Light green background when focused */
+    -fx-font-weight: bold;
+
+}
+
+/* Styling for the placeholder text */
+.text-field .text {
+    -fx-opacity: 2;                /* Make the placeholder text slightly faded */
+}
+
+/* Optional: If you want to change the font size for the date/time TextField */
+.date-time-text-field {
+    -fx-font-size: 18px;             /* Set larger font size for date/time */
+    -fx-font-weight: bold;           /* Make the font bold */
+    -fx-background-color: Black;   /* White background for the date/time field */
+    -fx-border-color: #4CAF50;       /* Green border */
+    -fx-border-radius: 10px;         /* Rounded corners */
+    -fx-padding: 15px;               /* More padding for better visibility */
+}
+
