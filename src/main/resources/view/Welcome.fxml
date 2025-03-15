@@ -24,7 +24,7 @@
             <Font name="SimSun" size="40.0" />
          </font>
       </Label>
-      <Button layoutX="109.0" layoutY="238.0" mnemonicParsing="false" stylesheets="@../css/Hover.css" text="Register" />
+      <Button fx:id="btnRegister" layoutX="109.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" stylesheets="@../css/Hover.css" text="Register" />
       <Button fx:id="btnLogin" layoutX="109.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnLogonOnAction" stylesheets="@../css/Hover.css" text="Login" />
       <Button layoutX="109.0" layoutY="300.0" mnemonicParsing="false" stylesheets="@../css/Hover.css" text="Reset Password" />
       <TextField fx:id="txtTime" blendMode="ADD" editable="false" focusTraversable="false" layoutX="387.0" layoutY="137.0" onMouseClicked="#txtTimeClickOnAction" opacity="0.45" prefHeight="25.0" prefWidth="166.0" stylesheets="@../css/DateTime.css">

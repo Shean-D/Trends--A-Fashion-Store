@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -19,5 +20,9 @@ public class LoginFormController {
         stage.setTitle("Welcome Page");
         stage.show();
 
+    }
+
+
+    public void btnLoginOnAction(ActionEvent actionEvent) {
     }
 }

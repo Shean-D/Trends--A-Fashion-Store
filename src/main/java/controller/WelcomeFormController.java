@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -16,6 +17,12 @@ import java.time.format.DateTimeFormatter;
 
 
 public class WelcomeFormController {
+
+    @FXML
+    public Button btnRegister;
+
+    @FXML
+    public Button btnLogin;
 
     @FXML
     private TextField txtTime;
@@ -36,6 +43,13 @@ public class WelcomeFormController {
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
 
+    }
+
+    public void btnRegisterOnAction() throws IOException {
+        Stage stage = (Stage) btnRegister.getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Register.fxml"))));
+        stage.setTitle("Register Page");
+        stage.show();
     }
 
     public void btnLogonOnAction(ActionEvent actionEvent) throws IOException {
