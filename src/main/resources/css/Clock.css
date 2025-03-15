@@ -1,0 +1,25 @@
+/* Apply styles to all TextFields */
+.text-field {
+    -fx-text-fill: white; /* White text color */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    -fx-background-radius: 10px; /* Rounded corners */
+    -fx-border-color: rgba(255, 255, 255, 0.3); /* Subtle border */
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.3), 10, 0, 0, 0);
+}
+
+/* Add blur effect for glass-like appearance */
+.text-field {
+    -fx-background-insets: 0;
+    -fx-background: rgba(255, 255, 255, 0.2);
+    -fx-effect: blur(10px);
+}
+
+/* Placeholder text styling */
+.text-field:focused {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-border-color: white;
+}

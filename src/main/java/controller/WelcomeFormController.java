@@ -55,8 +55,9 @@ public class WelcomeFormController {
     public void btnLogonOnAction(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
 
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Login.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/EmployeeDashBoard.fxml"))));
         stage.setTitle("Login Page");
         stage.show();
     }
+
 }

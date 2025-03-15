@@ -15,11 +15,6 @@ public class LoginFormController {
 
     public void btnBackOnAction() throws IOException {
 
-        Stage stage = (Stage) btnBack.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Welcome.fxml"))));
-        stage.setTitle("Welcome Page");
-        stage.show();
-
     }
 
 
