@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WelcomeFormController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="601.0">
+         <image>
+            <Image url="@../imgs/login_bg.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.59" />
+         </effect>
+      </ImageView>
+      <Label layoutX="128.0" layoutY="31.0" prefHeight="61.0" prefWidth="345.0" text="Welcome to Trends" textFill="WHITE">
+         <font>
+            <Font name="SimSun" size="40.0" />
+         </font>
+      </Label>
+      <Button layoutX="109.0" layoutY="238.0" mnemonicParsing="false" stylesheets="@../css/Hover.css" text="Register" />
+      <Button layoutX="109.0" layoutY="184.0" mnemonicParsing="false" stylesheets="@../css/Hover.css" text="Login" />
+      <Button layoutX="109.0" layoutY="300.0" mnemonicParsing="false" stylesheets="@../css/Hover.css" text="Reset Password" />
+      <TextField fx:id="txtTime" editable="false" focusTraversable="false" layoutX="387.0" layoutY="137.0" onMouseClicked="#txtTimeClickOnAction" opacity="0.66" prefHeight="25.0" prefWidth="166.0" />
+   </children>
+</AnchorPane>

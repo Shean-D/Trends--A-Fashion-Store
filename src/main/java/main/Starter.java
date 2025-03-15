@@ -16,7 +16,7 @@ public class Starter extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Login.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Welcome.fxml"))));
         stage.show();
     }
 }
