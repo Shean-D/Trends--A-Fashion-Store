@@ -65,8 +65,11 @@ public class EmployeeDashBoardFormController {
     }
 
     @FXML
-    void btnStoreOnAction(ActionEvent event) {
+    void btnStoreOnAction(ActionEvent event) throws IOException {
 
+        Stage stage = (Stage) btnHome.getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Store.fxml"))));
+        stage.show();
     }
 
     public void initialize() {
