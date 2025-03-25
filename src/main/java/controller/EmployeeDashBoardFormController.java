@@ -41,7 +41,12 @@ public class EmployeeDashBoardFormController {
     private JFXTextField txtTime;
 
     @FXML
-    void btnCalcOnAction(ActionEvent event) {
+    void btnCalcOnAction(ActionEvent event) throws IOException {
+
+        Stage newStage1 = new Stage();
+        newStage1.setTitle("Calculator");
+        newStage1.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Calculator.fxml"))));
+        newStage1.show();
 
     }
 
