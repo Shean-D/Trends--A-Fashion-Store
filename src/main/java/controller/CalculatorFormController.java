@@ -1,14 +1,20 @@
 package controller;
 
+import com.google.inject.Inject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import service.custom.CalculatorService;
+import service.custom.CustomerService;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CalculatorFormController {
+
+    @Inject
+    CalculatorService calculatorService;
 
     @FXML
     private TextField txtDisplay;
@@ -29,22 +35,10 @@ public class CalculatorFormController {
     void btnDelete(ActionEvent event) {
 
         String display = txtDisplay.getText();
-        String [] numbers = display.split(",");
+        String newDisplay = calculatorService.delete(display);
 
-        List<String> newDisplay = new ArrayList<>();
+        txtDisplay.setText(newDisplay);
 
-        for(String number : numbers){
-            if (number.length() > 0){
-                String newNumber = number.substring(0, number.length() - 1);
-                newDisplay.add(newNumber);
-            }
-        }
-
-        StringBuilder result = new StringBuilder();
-        for(String number : newDisplay){
-            result.append(number);
-        }
-        txtDisplay.setText(result.toString());
     }
 
     @FXML
@@ -62,6 +56,8 @@ public class CalculatorFormController {
     @FXML
     void btnEqual(ActionEvent event) {
 
+        String display = txtDisplay.getText();
+        calculatorService.equal(display);
     }
 
     @FXML
@@ -138,7 +134,7 @@ public class CalculatorFormController {
     @FXML
     void btnPrecentage(ActionEvent event) {
 
-
+        getDisplayValues("%");
     }
 
     private void getDisplayValues(String text){

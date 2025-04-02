@@ -1,13 +1,17 @@
 package controller;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import config.AppModul;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -43,10 +47,16 @@ public class EmployeeDashBoardFormController {
     @FXML
     void btnCalcOnAction(ActionEvent event) throws IOException {
 
-        Stage newStage1 = new Stage();
-        newStage1.setTitle("Calculator");
-        newStage1.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Calculator.fxml"))));
-        newStage1.show();
+        Injector injector = Guice.createInjector(new AppModul());
+        Stage stage = new Stage();
+
+        FXMLLoader fxmlLoader =  new FXMLLoader(getClass().getResource("/view/Calculator.fxml"));
+        fxmlLoader.setControllerFactory(injector::getInstance);
+
+        Parent root = fxmlLoader.load();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Calculator");
+        stage.show();
 
     }
 
